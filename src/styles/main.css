@@ -9,24 +9,29 @@
         sans-serif;
     --border-color: rgb(6, 3, 27);
 }
-body{
+
+*, *::after, *::before{
     box-sizing: border-box;
+
+}
+body{
+    padding: 0%;
+    margin: 0%;
 }
 
 .main-todo{
-    width:fit-content;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     justify-content: center;
-    border: 1px solid var(--border-color);
-    border-radius: 1em;
+    align-items: center;
+    background-color: #fff;
 }
 
 .main-contents{
+    width: auto;
     display: grid;
 }
 .main-title{
-    padding: 0.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,21 +43,29 @@ body{
     font-size: xxx-large;
 }
 
+.main-task{
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+}
 .main-task input{
-    width: 450px;
-    padding: 1rem;
+    width: 100%;
+    padding: 0.75rem 1.2rem;
     border: 1px solid var(--border-color);
     background-color: rgb(245, 243, 240);
     border-radius: 10px;
     color: var(--font-color);
     font-family: var(--font-family);
     font-size: large;
+    transition: background-color 0.2s ease;
 }
+.main-task input:focus, 
 .main-task input:hover{
     background-color: beige;
 }
 .main-task button{
-    padding: 1rem;
+    padding: 0.75rem 1.2rem;
     border: 1px solid var(--border-color);
     border-radius: 10px;
     color: var(--font-color);
@@ -60,6 +73,7 @@ body{
     font-size: large;
     background-color: antiquewhite;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 .main-task button:hover{
     background-color: bisque;
@@ -69,12 +83,18 @@ body{
 }
 
 .tasks{
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    max-width: 700px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 2rem;
-
+    display: flex;
+    flex: 1;
+    flex-flow: wrap;
+    overflow: auto;
+}
+.tasks ul{
+    list-style-position: inside;
 }
 .tasks ul li{
     list-style: circle;

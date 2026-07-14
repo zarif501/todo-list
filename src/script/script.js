@@ -1,3 +1,5 @@
+let alert = window.alert("Under construction");
+
 const addTasks = document.querySelector("#addTask");
 const addTaskBtn = document.querySelector("#addTaskBtn");
 const warningMsg = document.querySelector("#warningMsg");
@@ -27,3 +29,5 @@ addTaskBtn.addEventListener("click", function(){
 
     }
 });
+
+type 
