@@ -28,8 +28,15 @@ addTaskBtn.addEventListener("click", function(){
         tasks.prepend(newTask);
 
         deleteTaskIcon.addEventListener("click", function(){
+
             const newTask = deleteTaskIcon.parentElement;
+            warningMsg.textContent = "Task deleted.";
+            warningMsg.style.color = "orange";
             newTask.remove();
+
+            if(tasks.children.length === 0){
+                welcomeMsgs.style.display = "block";
+            }
         });
 
         addTasks.value = "";
@@ -37,7 +44,6 @@ addTaskBtn.addEventListener("click", function(){
         welcomeMsgs.style.display = "none";
         warningMsg.textContent = "Task added!";
         warningMsg.style.color = "green";
-        newTask.style.listStyle= "decimal";
 
     }
 });

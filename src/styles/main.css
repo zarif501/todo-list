@@ -91,7 +91,9 @@ body{
     max-width: 700px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
-    display: flex;
+    padding: 1rem;
+    display: block;
+    overflow-y: auto;
     flex: 1;
     flex-flow: wrap;
     overflow: auto;
@@ -99,21 +101,24 @@ body{
 }
 .tasks ul{
     width: 100%;
-    display: grid;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: 1em;
     width: 100%;
     max-width: 700px;
     list-style-position: inside;
 }
 .tasks ul li{
-    min-width: 300px;
-    max-width: 100%;
+    min-width: 250px;
+    max-width: 500px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 0.75em 1.2em;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: var(--primary-color);
     color: var(--font-color);
     font-family: var(--font-family);
@@ -123,4 +128,5 @@ body{
 }
 .tasks ul li img{
     width: 2em;
+    padding: 1px;
 }
