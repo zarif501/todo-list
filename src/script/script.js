@@ -1,4 +1,4 @@
-let alert = window.alert("Under construction");
+//let alert = window.alert("Under construction");
 
 const addTasks = document.querySelector("#addTask");
 const addTaskBtn = document.querySelector("#addTaskBtn");
@@ -17,17 +17,28 @@ addTaskBtn.addEventListener("click", function(){
     }else {
 
         const newTask = document.createElement("li");
-        
+        const deleteTaskIcon = document.createElement("img");
+        const accompleshedIcon = document.createElement("img");
+
         newTask.textContent = (addTasks.value);
+
+        deleteTaskIcon.src = ("src/icons/delete.svg");
+        newTask.appendChild(deleteTaskIcon);
+
         tasks.prepend(newTask);
+
+        deleteTaskIcon.addEventListener("click", function(){
+            const newTask = deleteTaskIcon.parentElement;
+            newTask.remove();
+        });
 
         addTasks.value = "";
 
         welcomeMsgs.style.display = "none";
-        warningMsg.textContent = "Task added";
+        warningMsg.textContent = "Task added!";
         warningMsg.style.color = "green";
+        newTask.style.listStyle= "decimal";
 
     }
 });
 
-type 
