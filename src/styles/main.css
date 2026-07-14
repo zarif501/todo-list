@@ -1,12 +1,6 @@
 :root{
     --font-color: rgb(6, 3, 27);
-    --font-family: 'Lucida Sans',
-        'Lucida Sans Regular',
-        'Lucida Grande',
-        'Lucida Sans Unicode',
-        Geneva,
-        Verdana,
-        sans-serif;
+    --font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --border-color: rgb(6, 3, 27);
 }
 
@@ -15,16 +9,22 @@
 
 }
 body{
-    padding: 0%;
+    padding-top: 5%;
     margin: 0%;
-}
-
-.main-todo{
-    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+}
+
+.main-todo{
+    max-width: fit-content;
+    padding: 2rem;
+    display: flex;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur (8px);
+    box-shadow: 0 10px 25px rgba(6, 3, 27, 0.08);
+    
 }
 
 .main-contents{
@@ -35,12 +35,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
-.main-title h1{  
-    color: var(--font-color);
-    font-family: var(--font-family);
-    font-weight: bolder;
-    font-size: xxx-large;
+.main-title img{  
+    width: 60%;
+    padding: 1rem;
 }
 
 .main-task{
