@@ -1,0 +1,81 @@
+:root{
+    --font-color: rgb(6, 3, 27);
+    --font-family: 'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        'Lucida Sans Unicode',
+        Geneva,
+        Verdana,
+        sans-serif;
+    --border-color: rgb(6, 3, 27);
+}
+body{
+    box-sizing: border-box;
+}
+
+.main-todo{
+    width:fit-content;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 1em;
+}
+
+.main-contents{
+    display: grid;
+}
+.main-title{
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-title h1{  
+    color: var(--font-color);
+    font-family: var(--font-family);
+    font-weight: bolder;
+    font-size: xxx-large;
+}
+
+.main-task input{
+    width: 450px;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    background-color: rgb(245, 243, 240);
+    border-radius: 10px;
+    color: var(--font-color);
+    font-family: var(--font-family);
+    font-size: large;
+}
+.main-task input:hover{
+    background-color: beige;
+}
+.main-task button{
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--font-color);
+    font-family: var(--font-family);
+    font-size: large;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+.main-task button:hover{
+    background-color: bisque;
+}
+.main-task p{
+    align-self: baseline;
+}
+
+.tasks{
+    width: 500px;
+    height: 400px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2rem;
+
+}
+.tasks ul li{
+    list-style: circle;
+}
