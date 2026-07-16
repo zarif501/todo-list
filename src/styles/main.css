@@ -11,8 +11,8 @@
 }
 
 body{
-    padding-top: 10%;
-    margin: 0%;
+    padding-top: 0%;
+    margin: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,6 +103,7 @@ body{
     width: 100%;
     padding: 0;
     margin: 0;
+    display: grid;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -118,7 +119,10 @@ body{
     border-radius: 10px;
     padding: 0.75em 1.2em;
     display: flex;
+    flex-grow: 1;
     justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
     background-color: var(--primary-color);
     color: var(--font-color);
     font-family: var(--font-family);
@@ -126,7 +130,11 @@ body{
     font-weight: normal;
     box-shadow: 0 10px 25px rgba(6, 3, 27, 0.08);
 }
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
 .tasks ul li img{
     width: 2em;
-    padding: 1px;
 }
