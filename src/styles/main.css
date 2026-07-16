@@ -135,6 +135,11 @@ body{
     text-decoration: line-through;
     opacity: 0.6;
 }
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 .tasks ul li img{
     width: 2em;
 }
